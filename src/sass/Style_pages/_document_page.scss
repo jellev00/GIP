@@ -1,0 +1,53 @@
+.main_document {
+        // background-color: gray;
+        height: 120vh;
+        padding: 50px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-size: $Font-lag;
+            font-weight: $Font_bold;
+            color: $Blue;
+        }
+
+        .text_1 {
+            margin-top: 50px;
+            font-size: $Font_sm;
+            font-weight: $Font-semi;
+            color: $Black;
+
+            .purple {
+                color: $Blue;
+            }
+        }
+
+        .text_2 {
+            margin-top: -40px;
+            font-size: $Font_sm;
+            font-weight: $Font-semi;
+            color: $Black;
+
+            .purple {
+                color: $Blue;
+            }
+        }
+
+        .Down_btn {
+            margin-top: 30px;
+            width: 130px;
+            height: 50px;
+            background-color: $Organge;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            color: $White;
+            font-size: $Font-med;
+            font-weight: $Font-semi;
+        }
+}

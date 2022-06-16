@@ -1,0 +1,96 @@
+.main_work {
+    // background-color: gray;
+    height: 135vh;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-size: $Font-lag;
+        font-weight: $Font_bold;
+        color: $Blue;
+    }
+
+    .text_work_1 {
+        margin-top: 50px;
+        font-size: $Font_sm;
+        font-weight: $Font-semi;
+        color: $Black;
+
+        .purple {
+            color: $Blue;
+        }
+    }
+
+    .text_log {
+        margin-top: 50px;
+        width: 795px;
+
+        color: $Organge;
+        font-size: $Font_sm;
+        font-weight: $Font-semi;
+    }
+
+    img {
+        margin-top: 20px;
+    }
+
+    $animationSpeed: 60s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-450px * 29))}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 350px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 920px;
+	
+	&::before,
+	&::after {
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 400px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite running;
+		display: flex;
+		width: calc(450px * 58);
+	}
+	
+	.slide {
+		height: 350px;
+		width: 450px;
+	}
+
+    .box {
+        height: 320px;
+        width: 450px;
+    }
+
+}
+}

@@ -40,7 +40,7 @@
                     color: $Black;
                 }
 
-                .home {
+                .home, .document, .work, .contact {
                     border-bottom: 2px solid $Organge;
                 }
             }
@@ -64,7 +64,7 @@
     }
 }
 
-main {
+.main_home {
     // background-color: gray;
     height: 86vh;
     padding: 50px;
@@ -79,13 +79,72 @@ main {
         color: $Blue;
     }
 
-    // .slider {
+    
 
-    //     .slider-track {
-    //         display: flex;
-    //         flex-direction: column;
-    //     }
-    // }
+$animationSpeed: 10s;
+
+// Animation
+@keyframes scrolls {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-450px * 6))}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 320px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 460px;
+	
+	&::before,
+	&::after {
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 400px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scrolls $animationSpeed linear infinite running;
+		display: flex;
+		width: calc(450px * 6);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 450px;
+	}
+
+    .slide-2 {
+        margin-left: 80px;
+    }
+
+    .slide-4 {
+        margin-right: 180px;
+    }
+
+    .box {
+        height: 320px;
+        width: 450px;
+    }
+
+}
 }
 
 footer {
